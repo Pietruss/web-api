@@ -128,8 +128,9 @@ namespace app1API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "app1API v1"));
             }
+
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "app1API v1"));
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseMiddleware<TimeMeasuringMiddleware>();
