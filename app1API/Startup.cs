@@ -124,12 +124,8 @@ namespace app1API
             app.UseCors("FrontendClient");
             seeder.Seed();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-            }
-
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "app1API v1"));
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
