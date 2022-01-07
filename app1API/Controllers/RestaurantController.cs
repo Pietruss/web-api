@@ -15,7 +15,6 @@ namespace app1API.Controllers
 {
     [Route("api/restaurant")]
     [ApiController]
-    [Authorize]
     public class RestaurantController: ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
