@@ -25,7 +25,7 @@ namespace app1API.Controllers
         {
             _accountService.RegisterUser(registerUser);
 
-            return Ok();
+            return Ok(); 
         }
 
         [HttpPost("login")]
