@@ -20,7 +20,6 @@ namespace app1API.Authorization
             }
 
             var userId = context.User.FindFirst(x => x.Type == ClaimTypes.NameIdentifier).Value;
-
             if (restaurant.CreatedById == int.Parse(userId))
             {
                 context.Succeed(requirement);
